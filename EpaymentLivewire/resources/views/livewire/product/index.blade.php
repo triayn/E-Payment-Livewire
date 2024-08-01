@@ -1,24 +1,24 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Pengguna</h1>
+        <h1>Produk</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <!-- <li class="breadcrumb-item">Pages</li> -->
-                <li class="breadcrumb-item active">Pengguna</li>
+                <li class="breadcrumb-item active">Produk</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div>
 
     <div class="card">
         <div class="card-title">
             <div class="row" style="padding: 10px;">
                 <div class="col-6">
-                    <h5><strong>Daftar Pengguna</strong></h5>
+                    <h5 style="margin-left: 20px;"><strong>Data Produk</strong></h5>
                 </div>
                 <div class="col-6">
-                    <a href="{{ route('users.create') }}" class="btn btn-primary float-end" wire:navigate>Tambah Pengguna</a>
+                    <a href="{{ route('users.create') }}" class="btn btn-primary float-end" style="margin-right: 20px;" wire:navigate>Tambah Produk</a>
                 </div>
             </div>
         </div>
@@ -28,25 +28,28 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
+                        <th scope="col">Kode Produk</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">No Handphone</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Stok</th>
+                        <th scope="col">Ukuran</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @php $i = 1; @endphp
-                    @foreach($users as $user)
+                    @foreach($products as $product)
                     <tr>
                         <td>{{ $i++ }}</td>
-                        <td>{{ $user->nama }}</td>
-                        <td>{{ $user->no_telpon }}</td>
-                        <td>{{ $user->alamat }}</td>
-                        <td>{{ $user->email }}</td>
+                        <td>{{ $product->kode_produk }}</td>
+                        <td>{{ $product->nama }}</td>
+                        <td>{{ $product->harga }}</td>
+                        <td>{{ $product->stok }}</td>
+                        <td>{{ $product->ukuran }}</td>
                         <td>
-                            <a wire:navigate href="/pengguna/{{ $user->id }}/edit" class="btn btn-sm btn-warning"><i class="bi bi-pen"> Edit</i></a>
-                            <button wire:click="delete({{ $user->id }})" wire:confirm="Yakin ingin menghapus data?" class="btn btn-sm btn-danger"><i class="bi bi-trash"> Hapus</i></button>
+                            <a wire:navigate href="" class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                            <a wire:navigate href="" class="btn btn-sm btn-warning"><i class="bi bi-pen"></i></a>
+                            <button wire:click="" wire:confirm="Yakin ingin menghapus data?" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
                     @endforeach
