@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                 'name' => 'M Rifaul Ardiyanto',
                 'no_telpon' => '081234567891',
                 'alamat' => 'Jl. Merdeka No. 2',
-                'jenis_kelamin' => 'perempuan',
+                'jenis_kelamin' => 'laki-laki',
                 'tempat_lahir' => 'Bandung',
                 'tanggal_lahir' => '1992-02-02',
                 'role' => 'Admin',

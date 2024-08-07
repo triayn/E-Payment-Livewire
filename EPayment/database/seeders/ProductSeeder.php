@@ -17,7 +17,7 @@ class ProductSeeder extends Seeder
             // Basreng Products
             [
                 'kode_produk' => 'BASRENKID0001',
-                'nama' => 'Basreng Original',
+                'nama' => 'Basreng Original dengan ukuran 110 gram',
                 'deskripsi' => 'Camilan basreng original dengan rasa yang lezat.',
                 'harga' => 10000,
                 'kategori' => 'basreng',
@@ -29,7 +29,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'kode_produk' => 'BASRENKID0002',
-                'nama' => 'Basreng Pedas Lv1',
+                'nama' => 'Basreng Pedas Lv1 dengan ukuran 110 gram',
                 'deskripsi' => 'Camilan basreng pedas level 1 yang menggugah selera.',
                 'harga' => 12000,
                 'kategori' => 'basreng',
@@ -41,7 +41,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'kode_produk' => 'BASRENKID0003',
-                'nama' => 'Basreng Balado',
+                'nama' => 'Basreng Balado dengan ukuran 220 gram',
                 'deskripsi' => 'Basreng dengan rasa balado yang pedas dan nikmat.',
                 'harga' => 15000,
                 'kategori' => 'basreng',
@@ -54,7 +54,7 @@ class ProductSeeder extends Seeder
             // Mie Lidi Products
             [
                 'kode_produk' => 'BASRENKID0004',
-                'nama' => 'Mie Lidi Original',
+                'nama' => 'Mie Lidi Original dengan ukuran 80 gram',
                 'deskripsi' => 'Mie lidi dengan rasa original yang gurih.',
                 'harga' => 8000,
                 'kategori' => 'mie-lidi',
@@ -66,7 +66,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'kode_produk' => 'BASRENKID0005',
-                'nama' => 'Mie Lidi Pedas',
+                'nama' => 'Mie Lidi Pedas Level 3 dengan ukuran 80 gram',
                 'deskripsi' => 'Mie lidi pedas yang membuat ketagihan.',
                 'harga' => 9000,
                 'kategori' => 'mie-lidi',
@@ -79,8 +79,8 @@ class ProductSeeder extends Seeder
             // Makaroni Products
             [
                 'kode_produk' => 'BASRENKID0006',
-                'nama' => 'Makaroni Keju',
-                'deskripsi' => 'Makaroni dengan rasa keju yang creamy.',
+                'nama' => 'Makaroni Sapi Panggang dengan ukuran 110 gram',
+                'deskripsi' => 'Makaroni dengan rasa Sapi Panggang yang creamy.',
                 'harga' => 12000,
                 'kategori' => 'makaroni',
                 'stok' => 80,
@@ -91,7 +91,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'kode_produk' => 'BASRENKID0007',
-                'nama' => 'Makaroni Balado',
+                'nama' => 'Makaroni Balado dengan ukuran 220 gram',
                 'deskripsi' => 'Makaroni dengan rasa balado yang pedas.',
                 'harga' => 13000,
                 'kategori' => 'makaroni',
@@ -101,6 +101,18 @@ class ProductSeeder extends Seeder
                 'status' => 'tersedia',
                 'create' => now(),
             ],
+            [
+                'kode_produk' => 'BASRENKID0008',
+                'nama' => 'Basreng Pedas Daun Jeruk Level 2 ukuran fullsize (1kg) ',
+                'deskripsi' => 'Basreng dengan rasa pedas yang dipadukan dengan daun jeruk menambhakan rasa pedas yang jauh lebih gurih dan wangi',
+                'harga' => '45000',
+                'kategori' => 'basreng',
+                'stok' => '23',
+                'ukuran' => '1 kg',
+                'varian' => 'Pedas-lv2',
+                'status' => 'tersedia',
+                'create' => now(),
+            ]
         ];
 
         DB::table('products')->insert($products);
